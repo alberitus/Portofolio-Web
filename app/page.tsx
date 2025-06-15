@@ -4,10 +4,11 @@ import Image from "next/image";
 import Silk from "./components/Silk/Silk";
 import ScrollVelocity from "./components/ScrollVelocity/ScrollVelocity";
 import { Timeline } from "./components/ui/timeline";
-import Footer from "./components/footer";
+import IconSocmed from "./components/IconSocmed";
 import HeroSection from "./components/HeroSection";
 import SkillsSection from "./SkillsSection";
 import dynamic from "next/dynamic";
+import Footer from "./components/Footer";
 import {
   IconBrandGithub,
   IconHome,
@@ -200,7 +201,7 @@ export default function Home() {
       "/images/skills/tailwind.png",
   },
   ];
-    const scrollToWithOffset = (id: string, offset: number) => {
+  const scrollToWithOffset = (id: string, offset: number) => {
     const el = document.getElementById(id);
     if (el) {
       const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
@@ -229,7 +230,10 @@ export default function Home() {
         <Timeline data={data} />  
       </section>
       <SkillsSection people={people} />
-      <Footer />
+      <section id="contact" className="py-20 px-4 md:px-8 lg:px-20">
+        <Footer />
+      </section>
+      <IconSocmed />
   </div>
   );
 } 

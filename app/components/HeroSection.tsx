@@ -7,7 +7,7 @@ import { TypeAnimation } from 'react-type-animation';
 import SplitText from "./SplitText/SplitText";
 import BlurText from "./BlurText/BlurText";
 import GradientText from "./GradientText/GradientText";
-
+import { IconMail, IconBrandWhatsapp } from "@tabler/icons-react";
 
 export default function HeroSection() {
   return (
@@ -62,22 +62,21 @@ export default function HeroSection() {
                     />
                 </div>
                 <BlurText
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum pretium quam iaculis malesuada.
-                    Nullam congue vel ligula lacinia tempus."
+                    text={`I am a freelance web programmer and developer, specializing in building modern, responsive, and user-friendly websites and web applications. With hands-on experience in various technologies, I help businesses and individuals bring their ideas to life on the web.\n\nIn addition to my freelance work, I also work full-time as an IT staff focusing on web development at a private company, where I contribute to the development, maintenance, and improvement of internal web-based systems.\n\nMy dual role allows me to stay up-to-date with both client-oriented and enterprise-grade projects, ensuring my skills remain sharp and adaptive to different scopes of work.`}
                     delay={75}
                     animateBy="words"
                     direction="top"
-                    className="text-xl mb-8"
+                    className="text-xl mb-8 text-[#C5C6C7]"
                 />
                 <div className="flex items-center">
                     <GradientText
                         colors={["#66FCF1", "#48a1dc", "#66FCF1"]}
                         animationSpeed={3}
                         showBorder={false}
-                        className="px-6 py-4 rounded-lg border text-xl font-bold mr-4"
+                        className="px-6 py-4 rounded-lg border text-xl font-bold mr-4 flex items-center gap-2"
                         href="mailto:alberitus.business@gmail.com?subject=Hello%20Alberitus&body=Halo%20saya%20ingin%20menghubungi%20Anda."
                     >
-                    Email
+                Email
                     </GradientText>
                     <GradientText
                         colors={["#66FCF1", "#48a1dc", "#66FCF1"]}
@@ -86,6 +85,7 @@ export default function HeroSection() {
                         className="px-6 py-4 rounded-lg border text-xl font-bold"
                         href="https://wa.me/6285752544386?text=Halo%20Alberitus%2C%20saya%20ingin%20bertanya"
                     >
+                        
                     Contact
                     </GradientText>
                 </div>

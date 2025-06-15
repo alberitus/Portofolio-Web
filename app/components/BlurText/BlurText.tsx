@@ -48,9 +48,9 @@ const BlurText: React.FC<BlurTextProps> = ({
   onAnimationComplete,
   stepDuration = 0.35,
 }) => {
-  const elements = animateBy === "words" ? text.split(" ") : text.split("");
+  const paragraphs = text.split(/\n\s*\n/); // Pisah berdasarkan \n\n
   const [inView, setInView] = useState(false);
-  const ref = useRef<HTMLParagraphElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -97,37 +97,48 @@ const BlurText: React.FC<BlurTextProps> = ({
   );
 
   return (
-    <p ref={ref} className={`blur-text ${className} flex flex-wrap`}>
-      {elements.map((segment, index) => {
-        const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
-
-        const spanTransition: Transition = {
-          duration: totalDuration,
-          times,
-          delay: (index * delay) / 1000,
-        };
-        (spanTransition as any).ease = easing;
+    <div ref={ref} className={`blur-text ${className} flex flex-col gap-4`}>
+      {paragraphs.map((para, paraIndex) => {
+        const segments = animateBy === "words" ? para.split(" ") : para.split("");
 
         return (
-          <motion.span
-            key={index}
-            initial={fromSnapshot}
-            animate={inView ? animateKeyframes : fromSnapshot}
-            transition={spanTransition}
-            onAnimationComplete={
-              index === elements.length - 1 ? onAnimationComplete : undefined
-            }
-            style={{
-              display: "inline-block",
-              willChange: "transform, filter, opacity",
-            }}
-          >
-            {segment === " " ? "\u00A0" : segment}
-            {animateBy === "words" && index < elements.length - 1 && "\u00A0"}
-          </motion.span>
+          <div key={paraIndex} className="flex flex-wrap">
+            {segments.map((segment, index) => {
+              const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
+
+              const spanTransition: Transition = {
+                duration: totalDuration,
+                times,
+                delay: ((paraIndex * 999) + index * delay) / 1000, // Delay bertahap antar paragraf
+              };
+              (spanTransition as any).ease = easing;
+
+              return (
+                <motion.span
+                  key={index}
+                  initial={fromSnapshot}
+                  animate={inView ? animateKeyframes : fromSnapshot}
+                  transition={spanTransition}
+                  onAnimationComplete={
+                    paraIndex === paragraphs.length - 1 &&
+                    index === segments.length - 1
+                      ? onAnimationComplete
+                      : undefined
+                  }
+                  style={{
+                    display: "inline-block",
+                    willChange: "transform, filter, opacity",
+                  }}
+                >
+                  {segment === " " ? "\u00A0" : segment}
+                  {animateBy === "words" && index < segments.length - 1 && "\u00A0"}
+                </motion.span>
+              );
+            })}
+          </div>
         );
       })}
-    </p>
+    </div>
   );
 };
 
