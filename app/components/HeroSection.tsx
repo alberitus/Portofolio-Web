@@ -68,7 +68,7 @@ export default function HeroSection() {
                         delay={75}
                         animateBy="words"
                         direction="top"
-                        className="text-base md:text-xl mb-3 text-[#C5C6C7]"
+                        className="text-base md:text-xl mb-2 text-[#C5C6C7]"
                     />
                     <div className="w-full sm:w-auto">
                         <GradientText

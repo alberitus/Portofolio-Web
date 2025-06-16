@@ -5,6 +5,7 @@ import Silk from "./components/Silk/Silk";
 import ScrollVelocity from "./components/ScrollVelocity/ScrollVelocity";
 import { Timeline } from "./components/ui/timeline";
 import IconSocmed from "./components/IconSocmed";
+import IconSocmed2 from "./components/IconSocmed2";
 import HeroSection from "./components/HeroSection";
 import SkillsSection from "./SkillsSection";
 import dynamic from "next/dynamic";
@@ -28,7 +29,7 @@ export default function Home() {
             PT Kraken Ventura Indonesia
           </h2>
           <p className="mb-8 text-xl font-normal text-[#C5C6C7] md:text-sm dark:text-neutral-200">
-            Developed a system monitoring and management dashboard for the company.
+            Developed a system monitoring and management dashboard for the company, built using <strong>CodeIgniter 4 (PHP Framework)</strong> for efficient and scalable backend performance.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -52,9 +53,8 @@ export default function Home() {
             PT. AYUTRANS UTAMA & PT. ANDIMA TRANSPORTINDO
           </h2>
           <p className="mb-8 text-xl font-normal text-[#C5C6C7] md:text-sm dark:text-neutral-200">
-            developed a Web-Based Operational Management System using Laravel (PHP) and JavaScript.
-            The system includes features like transactions, item input, orders, invoice printing, reimbursement, 
-            worksheets, and report export. It's designed for businesses with integrated workflows.
+            Developed a web-based operational management system using <strong>Laravel (PHP)</strong> with a touch of <strong>JavaScript</strong> for interactive elements.
+            The system includes features such as transactions, item input, orders, invoice printing, reimbursements, worksheets, and report exports — all tailored for businesses with integrated workflows.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -76,54 +76,30 @@ export default function Home() {
       ),
     },
     {
-      title: "Changelog",
+      title: "DevLog",
       content: (
         <div>
           <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Deployed 5 new components on Aceternity today
+            Personal projects & learning journey update log
           </p>
           <div className="mb-8">
             <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Card grid component
+            &bull; Built a responsive Portfolio Website with React & TailwindCSS
             </div>
             <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Startup template Aceternity
+            &bull; Experimented with contact form using EmailJS integration
             </div>
+            {/* <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              Implemented dark mode toggle and animated hero section
+            </div> */}
             <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Random file upload lol
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Himesh Reshammiya Music CD
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Salman Bhai Fan Club registrations open
+              Created a Portofolio Website With <strong>Html</strong> and <strong>CSS</strong>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <img
               src="/images/oldProfile.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="/images/oldProfile.png"
               alt="feature template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="/images/oldProfile.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="/images/oldProfile.png"
-              alt="cards template"
               width={500}
               height={500}
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
@@ -134,13 +110,6 @@ export default function Home() {
     },
   ];
   const links = [
-    // {
-    //   title: "Products",
-    //   icon: (
-    //     <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    //   ),
-    //   href: "#",
-    // },
     {
       title: "Experience",
       icon: (
@@ -219,7 +188,7 @@ export default function Home() {
         rotation={0}
       />
     </div>
-    <div className="container mx-auto h-screen">
+    <div className="w-full h-screen px-0">
       <HeroSection />
     </div>
       <ScrollVelocity
@@ -234,6 +203,7 @@ export default function Home() {
         <Footer />
       </section>
       <IconSocmed />
+      <IconSocmed2 />
   </div>
   );
 } 
