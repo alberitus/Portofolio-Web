@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+Inspired by Creative Academy Indonesia
+This project draws inspiration from the design and structure approaches taught by Creative Academy Indonesia, a platform known for its focus on modern and creative web development techniques.
+
 ## Getting Started
 
 First, run the development server:
