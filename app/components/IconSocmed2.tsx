@@ -16,7 +16,7 @@ export default function IconSocmed2() {
 
         {/* Instagram */}
         <a
-            href="https://www.instagram.com/your_instagram_username"
+            href="https://www.instagram.com/alberitus"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-[#66FCF1] transition-colors duration-300"
