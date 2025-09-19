@@ -76,7 +76,7 @@ export default function HeroSection() {
                         animationSpeed={3}
                         showBorder={false}
                         className="w-full text-center px-6 py-3 rounded-lg border text-base md:text-lg font-bold hover:bg-[#66FCF1] hover:text-[#0B0C10] transition"
-                        href="https://drive.google.com/file/d/1h9mEpmdVOunrkyqleEfIWgYuIZljb5o4/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1zXViwl8rldJg2fUQqkcT4j1bjlCZGJnI/view?usp=sharing"
                         >
                         Download My CV
                         </GradientText>
